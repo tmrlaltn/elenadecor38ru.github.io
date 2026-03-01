@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#7D9B7D"/>
+  <title>elenadecor38ru — искусственные растения для дома и бизнеса</title>
+  <meta name="description" content="elenadecor38ru— реалистичные искусственные растения и декоративные композиции для дома и бизнеса. Подбор решения под интерьер, изготовление под заказ, монтаж и сопровождение."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== ЦВЕТОВАЯ ПАЛИТРА ===== */
+    :root {
+      --bg-primary: #FAF9F6;
+      --bg-secondary: #F5F3EF;
+      --bg-accent: #EBE8E1;
+      --green-primary: #7D9B7D;
+      --green-secondary: #5A705A;
+      --green-dark: #3D4D3D;
+      --text-primary: #2C2C2C;
+      --text-secondary: #6B6B6B;
+      --text-light: #9A9A9A;
+      --white: #FFFFFF;
+      --border: #E5E2DC;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.08);
+      --radius: 12px;
+      --radius-lg: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --container-max: 1200px;
+      --header-height: 70px;
+    }
+
+    /* ===== БАЗОВЫЕ СТИЛИ ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--green-secondary);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    a:hover {
+      color: var(--green-dark);
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    /* ===== КОНТЕЙНЕР ===== */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 0 32px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 40px;
+      }
+    }
+
+    /* ===== СЕКЦИИ ===== */
+    section {
+      padding: 60px 0;
+    }
+
+    @media (min-width: 768px) {
+      section {
+        padding: 80px 0;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      section {
+        padding: 100px 0;
+      }
+    }
+
+    /* ===== ТИПОГРАФИКА ===== */
+    h1 {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--text-primary);
+    }
+
+    h2 {
+      font-size: clamp(1.5rem, 4vw, 2.25rem);
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      h2 {
+        margin-bottom: 48px;
+      }
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--green-dark);
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    @media (min-width: 768px) {
+      p {
+        font-size: 1.05rem;
+      }
+    }
+
+    /* ===== НАВИГАЦИЯ ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(250, 249, 246, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+
+    .logo {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--green-dark);
+      letter-spacing: -0.01em;
+      z-index: 1001;
+    }
+
+    @media (min-width: 768px) {
+      .logo {
+        font-size: 1.1rem;
+      }
+    }
+
+    .nav-links {
+      display: none;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--green-primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    /* Мобильное меню */
+    .mobile-menu-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 10px;
+      z-index: 1001;
+    }
+
+    .mobile-menu-btn span {
+      width: 24px;
+      height: 2px;
+      background: var(--green-dark);
+      transition: var(--transition);
+    }
+
+    .mobile-menu-btn.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .mobile-menu-btn.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .mobile-menu-btn.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @media (min-width: 768px) {
+      .mobile-menu-btn {
+        display: none;
+      }
+    }
+
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 320px;
+      height: 100vh;
+      background: var(--bg-primary);
+      border-left: 1px solid var(--border);
+      padding: 100px 32px 32px;
+      transition: var(--transition);
+      z-index: 999;
+      overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+      right: 0;
+    }
+
+    .mobile-nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .mobile-nav a {
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .mobile-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.4);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 998;
+    }
+
+    .mobile-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+      padding-top: var(--header-height);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-content {
+        gap: 80px;
+      }
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .hero-text {
+        text-align: left;
+      }
+    }
+
+    .hero-text p {
+      margin: 20px 0 32px;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+
+    @media (min-width: 768px) {
+      .hero-text p {
+        font-size: 1.15rem;
+        margin: 24px 0 40px;
+      }
+    }
+
+    .hero-image {
+      position: relative;
+      order: -1;
+    }
+
+    @media (min-width: 768px) {
+      .hero-image {
+        order: 1;
+      }
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+
+    @media (min-width: 768px) {
+      .hero-image img {
+        height: 450px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-image img {
+        height: 550px;
+      }
+    }
+
+    /* ===== КНОПКИ ===== */
+    .btn {
+      display: inline-block;
+      background: var(--green-primary);
+      color: var(--white);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .btn {
+        padding: 16px 40px;
+        font-size: 0.95rem;
+      }
+    }
+
+    .btn:hover {
+      background: var(--green-secondary);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--green-primary);
+      color: var(--green-primary);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+      .btn-group {
+        gap: 16px;
+        justify-content: flex-start;
+      }
+    }
+
+    /* ===== О НАС ===== */
+    .about {
+      background: var(--white);
+    }
+
+    .about-content {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+
+    @media (min-width: 768px) {
+      .about-content p {
+        font-size: 1.15rem;
+      }
+    }
+
+    /* ===== ПРЕИМУЩЕСТВА ===== */
+    .features {
+      background: var(--bg-secondary);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 500px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    .feature-card {
+      background: var(--white);
+      padding: 32px 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    @media (min-width: 768px) {
+      .feature-card {
+        padding: 40px 32px;
+      }
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--bg-accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    @media (min-width: 768px) {
+      .feature-card p {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* ===== УСЛУГИ ===== */
+    .services {
+      background: var(--white);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+    }
+
+    .service-card {
+      background: var(--bg-primary);
+      padding: 32px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    @media (min-width: 768px) {
+      .service-card {
+        padding: 40px;
+      }
+    }
+
+    .service-card:hover {
+      border-color: var(--green-primary);
+    }
+
+    .service-number {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--green-primary);
+      opacity: 0.4;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    /* ===== ЦЕНЫ ===== */
+    .pricing {
+      background: var(--bg-primary);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+    }
+
+    .price-card {
+      background: var(--white);
+      padding: 40px 32px;
+      border-radius: var(--radius-lg);
+      border: 2px solid var(--border);
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .price-card:hover {
+      border-color: var(--green-primary);
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .price-card.featured {
+      border-color: var(--green-primary);
+      background: linear-gradient(135deg, var(--white) 0%, var(--bg-secondary) 100%);
+    }
+
+    .price-card.featured::before {
+      content: 'Популярное';
+      position: absolute;
+      top: 20px;
+      right: -30px;
+      background: var(--green-primary);
+      color: var(--white);
+      padding: 4px 40px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      transform: rotate(45deg);
+    }
+
+    .price-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .price-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+
+    .price-amount {
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-bottom: 8px;
+    }
+
+    .price-amount span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+    }
+
+    .price-description {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .price-features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .price-features li {
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .price-features li:last-child {
+      border-bottom: none;
+    }
+
+    .price-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--green-primary);
+      font-weight: bold;
+    }
+
+    /* ===== B2B ===== */
+    .b2b {
+      background: var(--green-dark);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .b2b h2 {
+      color: var(--white);
+    }
+
+    .b2b p {
+      color: rgba(255,255,255,0.85);
+      max-width: 680px;
+      margin: 0 auto 32px;
+      font-size: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .b2b p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+      }
+    }
+
+    .b2b .btn {
+      background: var(--white);
+      color: var(--green-dark);
+    }
+
+    .b2b .btn:hover {
+      background: var(--bg-accent);
+      color: var(--green-dark);
+    }
+
+    /* ===== ГАЛЕРЕЯ ===== */
+    .gallery {
+      background: var(--white);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 500px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--bg-accent);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery-placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background: var(--bg-accent);
+      color: var(--text-light);
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ===== УХОД И ПРЕИМУЩЕСТВА ===== */
+    .care-benefits {
+      background: var(--bg-secondary);
+    }
+
+    .care-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .care-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+    }
+
+    .care-box, .benefits-box {
+      background: var(--white);
+      padding: 32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (min-width: 768px) {
+      .care-box, .benefits-box {
+        padding: 48px;
+      }
+    }
+
+    .benefits-box ul {
+      list-style: none;
+    }
+
+    .benefits-box li {
+      padding: 12px 0;
+      padding-left: 28px;
+      position: relative;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+
+    @media (min-width: 768px) {
+      .benefits-box li {
+        font-size: 1rem;
+        padding: 14px 0;
+        padding-left: 32px;
+      }
+    }
+
+    .benefits-box li:last-child {
+      border-bottom: none;
+    }
+
+    .benefits-box li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 8px;
+      background: var(--green-primary);
+      border-radius: 50%;
+    }
+
+    /* ===== КОНТАКТЫ ===== */
+    .contacts {
+      background: var(--white);
+    }
+
+    .contacts-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 500px) {
+      .contacts-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 768px) {
+      .contacts-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+    }
+
+    .contact-card {
+      background: var(--bg-primary);
+      padding: 24px 20px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    @media (min-width: 768px) {
+      .contact-card {
+        padding: 32px 24px;
+      }
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-card h4 {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 10px;
+    }
+
+    .contact-card a, .contact-card p {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    @media (min-width: 768px) {
+      .contact-card a, .contact-card p {
+        font-size: 0.95rem;
+      }
+    }
+
+    .contact-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 768px) {
+      .contact-cta {
+        margin-top: 48px;
+      }
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+    }
+
+    @media (min-width: 768px) {
+      footer {
+        padding: 40px 0;
+      }
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--green-dark);
+    }
+
+    @media (min-width: 768px) {
+      .footer-logo {
+        font-size: 1rem;
+      }
+    }
+
+    .footer-text {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    @media (min-width: 768px) {
+      .footer-text {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* ===== АНИМАЦИИ ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== КНОПКА НАВЕРХ ===== */
+    .scroll-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      background: var(--green-primary);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow-md);
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 997;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top:hover {
+      background: var(--green-secondary);
+      color: var(--white);
+      transform: translateY(-4px);
+    }
+
+    @media (min-width: 768px) {
+      .scroll-top {
+        bottom: 32px;
+        right: 32px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Навигация -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">elenadecor38ru</a>
+      <ul class="nav-links">
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#features">Преимущества</a></li>
+        <li><a href="#pricing">Цены</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <button class="mobile-menu-btn" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-overlay"></div>
+  <div class="mobile-nav">
+    <ul>
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#features">Преимущества</a></li>
+      <li><a href="#pricing">Цены</a></li>
+      <li><a href="#services">Услуги</a></li>
+      <li><a href="#gallery">Галерея</a></li>
+      <li><a href="#contacts">Контакты</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text fade-in">
+          <h1>Искусственные растения для дома и бизнеса</h1>
+          <p>Интерьерные растения и композиции, которые выглядят как живые — без ухода, без переживаний и с гарантией эстетики.</p>
+          <div class="btn-group">
+            <a href="#contacts" class="btn">Связаться с нами</a>
+            <a href="#gallery" class="btn btn-outline">Смотреть работы</a>
+          </div>
+        </div>
+        <div class="hero-image fade-in">
+          <!-- 📸 ЗАМЕНИТЕ ЭТО ФОТО: загрузите своё фото в GitHub как images/hero.jpg -->
+          <img src="images/hero.jpg" alt="Интерьерные растения для дома и офиса" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="gallery-placeholder" style="display:none;">
+            📸 Загрузите фото<br>в папку images/hero.jpg
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="fade-in">Коротко о нас</h2>
+      <div class="about-content fade-in">
+        <p>Мы создаём высококачественные декоративные решения из современных материалов: силикон, латекс и специально обработанный текстиль. Наша цель — помочь вам привнести природную свежесть в интерьер — будь то уютная квартира, стильное кафе или представительский офис — без лишних хлопот.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="fade-in">Почему выбирают нас</h2>
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🌿</div>
+          <h3>Реалистичность</h3>
+          <p>Детальная проработка листьев и цветков, натуральные оттенки и фактура «Real Touch».</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">⏳</div>
+          <h3>Долговечность</h3>
+          <p>Материалы стойки к перепадам температур и влаге, подходят для витрин и уличных пространств.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">✨</div>
+          <h3>Практичность</h3>
+          <p>Не требуют полива, пересадки и сложного ухода — идеальны для занятых людей.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🎨</div>
+          <h3>Индивидуальный подход</h3>
+          <p>Подбираем решения под стиль и размеры вашего помещения.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">🏢</div>
+          <h3>B2B-решения</h3>
+          <p>Быстрое производство и монтаж композиций для ресторанов, отелей и офисов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 💰 ЦЕНЫ -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <h2 class="fade-in">Ценообразование</h2>
+      <div class="pricing-grid">
+        <!-- Карточка 1 -->
+        <div class="price-card fade-in">
+          <div class="price-icon">🪴</div>
+          <h3 class="price-title">Цветочные композиции</h3>
+          <div class="price-amount">от 1 000 ₽</div>
+          <p class="price-description">Небольшие композиции для дома и офиса</p>
+          <ul class="price-features">
+            <li>Высота до 50 см</li>
+            <li>Горшок в комплекте</li>
+            <li>Индивидуальный подбор</li>
+          </ul>
+          <a href="#contacts" class="btn">Заказать</a>
+        </div>
+
+        <!-- Карточка 2 (Популярное) -->
+        <div class="price-card featured fade-in">
+          <div class="price-icon">🌳</div>
+          <h3 class="price-title">Деревья до 160 см</h3>
+          <div class="price-amount">от 3 500 ₽</div>
+          <p class="price-description">Оптимальный выбор для квартир и кафе</p>
+          <ul class="price-features">
+            <li>Высота 80-160 см</li>
+            <li>Устойчивая подставка</li>
+            <li>Реалистичные материалы</li>
+            <li>Монтаж включён</li>
+          </ul>
+          <a href="#contacts" class="btn">Заказать</a>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="price-card fade-in">
+          <div class="price-icon">🌴</div>
+          <h3 class="price-title">Деревья от 170 см</h3>
+          <div class="price-amount">от 8 000 ₽</div>
+          <p class="price-description">Премиум решения для бизнес-пространств</p>
+          <ul class="price-features">
+            <li>Высота от 170 см</li>
+            <li>Усиленная конструкция</li>
+            <li>Для торговых центров</li>
+            <li>Выезд замерщика</li>
+          </ul>
+          <a href="#contacts" class="btn">Заказать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="fade-in">Наши услуги</h2>
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <div class="service-number">01</div>
+          <h3>Индивидуальные композиции</h3>
+          <p>Создание уникальных интерьерных растений под ваш запрос и стиль помещения.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-number">02</div>
+          <h3>Коммерческое оформление</h3>
+          <p>Оформление лобби, ресепшн, витрин и фотозон для бизнеса.</p>
+        </div>
+        <div class="service-card fade-in">
+          <div class="service-number">03</div>
+          <h3>Подбор по фото</h3>
+          <p>Реализация решений на основе фотографии вашего помещения.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B -->
+  <section class="b2b">
+    <div class="container">
+      <h2 class="fade-in">Для бизнеса</h2>
+      <p class="fade-in">Мы понимаем важность презентабельного внешнего вида в местах с высоким трафиком. Наши материалы проходят проверку на износостойкость, мы предлагаем решения, которые сохраняют вид 24/7. Подготовим коммерческое предложение с учётом сроков, бюджета и особенностей объекта.</p>
+      <a href="#contacts" class="btn fade-in">Запросить КП</a>
+    </div>
+  </section>
+
+  <!-- Галерея -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h2 class="fade-in">Наши работы</h2>
+      <div class="gallery-grid">
+        <!-- 📸 ФОТО 1: загрузите в GitHub как images/gallery-1.jpg -->
+        <div class="gallery-item fade-in">
+          <img src="images/gallery-1.jpg" alt="Растения в интерьере" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="gallery-placeholder" style="display:none;">
+            📸 Загрузите фото<br>в папку images/gallery-1.jpg
+          </div>
+        </div>
+        <!-- 📸 ФОТО 2: загрузите в GitHub как images/gallery-2.jpg -->
+        <div class="gallery-item fade-in">
+          <img src="images/gallery-2.jpg" alt="Оформление офиса" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="gallery-placeholder" style="display:none;">
+            📸 Загрузите фото<br>в папку images/gallery-2.jpg
+          </div>
+        </div>
+        <!-- 📸 ФОТО 3: загрузите в GitHub как images/gallery-3.jpg -->
+        <div class="gallery-item fade-in">
+          <img src="images/gallery-3.jpg" alt="Декор интерьера" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+          <div class="gallery-placeholder" style="display:none;">
+            📸 Загрузите фото<br>в папку images/gallery-3.jpg
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Уход и преимущества -->
+  <section class="care-benefits">
+    <div class="container">
+      <div class="care-grid">
+        <div class="care-box fade-in">
+          <h3>Уход и гарантия</h3>
+          <p>Искусственная зелень минимально требовательна в уходе: регулярная сухая чистка или протирание мягкой влажной салфеткой — и композиция как новая.</p>
+        </div>
+        <div class="benefits-box fade-in">
+          <h3>Преимущества для клиента</h3>
+          <ul>
+            <li>Экономия времени и ресурсов</li>
+            <li>Постоянный эстетический эффект</li>
+            <li>Оформление помещений с недостатком света</li>
+            <li>Гибкие решения под бюджет и стиль</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2 class="fade-in">Контакты</h2>
+      <div class="contacts-grid">
+        <div class="contact-card fade-in">
+          <div class="contact-icon">✈️</div>
+          <h4>Telegram</h4>
+          <a href="https://t.me/elenadecor38ru" target="_blank" rel="noopener">@elenadecor38ru</a>
+        </div>
+        <div class="contact-card fade-in">
+          <div class="contact-icon">💬</div>
+          <h4>ВКонтакте</h4>
+          <a href="https://vk.ru/elenadecor38ru" target="_blank" rel="noopener">vk.ru/elenadecor38ru</a>
+        </div>
+        <div class="contact-card fade-in">
+          <div class="contact-icon">📞</div>
+          <h4>Телефон</h4>
+          <a href="tel:+79086496004">+7 908 649-60-04</a>
+        </div>
+        <div class="contact-card fade-in">
+          <div class="contact-icon">✉️</div>
+          <h4>Email</h4>
+          <a href="mailto:elena.dekor38@mail.ru">elena.dekor38@mail.ru</a>
+        </div>
+        <div class="contact-card fade-in">
+          <div class="contact-icon">📍</div>
+          <h4>Адрес</h4>
+          <p>Иркутская обл., г. Усть-Илимск,<br>ул. Карла Маркса 55</p>
+        </div>
+        <div class="contact-card fade-in">
+          <div class="contact-icon">🚚</div>
+          <h4>Доставка</h4>
+          <p>По РФ удобным способом</p>
+        </div>
+      </div>
+      <div class="contact-cta fade-in">
+        <a href="https://t.me/elenadecor38ru" target="_blank" rel="noopener" class="btn">Написать в Telegram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">elenadecor38ru</div>
+        <div class="footer-text">
+          © 2026 Все права защищены. Сайт размещён на GitHub Pages.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Кнопка наверх -->
+  <button class="scroll-top" aria-label="Наверх">↑</button>
+
+  <script>
+    // ===== МОБИЛЬНОЕ МЕНЮ =====
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const mobileOverlay = document.querySelector('.mobile-overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+
+    function toggleMenu() {
+      mobileMenuBtn.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+    }
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', toggleMenu);
+    });
+
+    // ===== ПЛАВНЫЙ СКРОЛЛ =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          const headerOffset = 70;
+          const elementPosition = target.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // ===== АНИМАЦИЯ ПРИ СКРОЛЛЕ =====
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // ===== ЭФФЕКТ НАВБАРА =====
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 50) {
+        nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    });
+
+    // ===== КНОПКА НАВЕРХ =====
+    const scrollTopBtn = document.querySelector('.scroll-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 500) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+</html>
